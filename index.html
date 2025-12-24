@@ -3,54 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Design SS | Next-Gen Execution</title>
+    <title>BAD DESIGN | SS</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="glass-container">
-        <aside class="sidebar">
-            <div class="logo">BAD<span>DESIGN</span></div>
-            <nav class="side-nav">
-                <a href="#" class="active">Dashboard</a>
-                <a href="#">Scripts</a>
-                <a href="#">Servers</a>
-                <a href="#">Settings</a>
-            </nav>
-            <div class="user-profile">
-                <div class="avatar"></div>
-                <div class="user-info">
-                    <p class="username">Guest_User</p>
-                    <p class="status">Whitelisted</p>
+
+    <div class="scanline"></div>
+
+    <nav>
+        <div class="brand">BAD DESIGN<span>//SS</span></div>
+        <div class="nav-links">
+            <button onclick="showTab('home')">HOME</button>
+            <button onclick="showTab('features')">INTEL</button>
+            <button onclick="showTab('purchase')">ACCESS</button>
+            <a href="https://discord.gg/yourlink" class="discord-btn">JOIN DISCORD</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section id="home" class="tab-content active">
+            <div class="hero-text">
+                <h1 data-text="BAD DESIGN">BAD DESIGN</h1>
+                <p>Advanced Server-Side Instrumentation for Roblox. <br>Built for those who demand total control.</p>
+                <div class="status-bar">
+                    <span class="dot"></span> SYSTEM ONLINE // V2.0.4
                 </div>
             </div>
-        </aside>
+        </section>
 
-        <main class="dashboard-content">
-            <header class="top-bar">
-                <h1>System Status: <span class="status-online">Online</span></h1>
-                <button class="btn-glow">Execute Script</button>
-            </header>
+        <section id="features" class="tab-content">
+            <div class="grid">
+                <div class="feature-box">
+                    <span>01</span>
+                    <h3>RAW POWER</h3>
+                    <p>High-level execution with optimized backdoors that bypass standard detection strings.</p>
+                </div>
+                <div class="feature-box">
+                    <span>02</span>
+                    <h3>STEALTH</h3>
+                    <p>Proprietary methods ensure your presence remains hidden from server logs.</p>
+                </div>
+                <div class="feature-box">
+                    <span>03</span>
+                    <h3>DAILY UPDATES</h3>
+                    <p>New games added to the pool every 24 hours via our private crawler.</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <h3>Active Servers</h3>
-                    <p class="value">1,240</p>
+        <section id="purchase" class="tab-content">
+            <div class="purchase-container">
+                <div class="tier">
+                    <h2>LIFETIME</h2>
+                    <div class="price">$15.00</div>
+                    <p>One-time payment. Infinite power.</p>
+                    <a href="#" class="buy-now">ACQUIRE ACCESS</a>
                 </div>
-                <div class="stat-card">
-                    <h3>Execution Rate</h3>
-                    <p class="value">99.8%</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Uptime</h3>
-                    <p class="value">24/7</p>
-                </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section class="editor-section">
-                <div class="editor-header">Script Editor</div>
-                <textarea class="script-input" placeholder="-- Paste your script here..."></textarea>
-            </section>
-        </main>
-    </div>
+    <script>
+        function showTab(tabId) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Add active class to selected tab
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
