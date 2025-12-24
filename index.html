@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Design SS | Next-Gen Execution</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <aside class="sidebar">
+            <div class="logo">BAD<span>DESIGN</span></div>
+            <nav class="side-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Scripts</a>
+                <a href="#">Servers</a>
+                <a href="#">Settings</a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <p class="username">Guest_User</p>
+                    <p class="status">Whitelisted</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <header class="top-bar">
+                <h1>System Status: <span class="status-online">Online</span></h1>
+                <button class="btn-glow">Execute Script</button>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Active Servers</h3>
+                    <p class="value">1,240</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Execution Rate</h3>
+                    <p class="value">99.8%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Uptime</h3>
+                    <p class="value">24/7</p>
+                </div>
+            </section>
+
+            <section class="editor-section">
+                <div class="editor-header">Script Editor</div>
+                <textarea class="script-input" placeholder="-- Paste your script here..."></textarea>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
